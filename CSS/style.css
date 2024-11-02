@@ -1,0 +1,80 @@
+body {
+        background: linear-gradient(to right, #000000, #FFD700);
+        /* Hitam (#000000) ke kuning (#FFD700) */
+}
+
+/* Mengatur layout kanan dan kiri */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.section-form, .section-result {
+    width: 48%;
+}
+
+.section-form {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+form {
+    display: grid;
+    background: rgb(39, 38, 38);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.gender, input, label {
+    padding: 2px;
+}
+
+.section-result {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+article, p, label {
+    color: #ffffff;
+}
+
+article, .result-card, .advice {
+    margin-bottom: 15px;
+}
+
+.calculate-btn {
+    display: flex;
+    background-color: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    gap: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.download-btn, .consult-btn, .register-btn {
+
+}
+
+.calculate-btn:hover, .reset-btn:hover, .download-btn:hover, .consult-btn:hover, .register-btn:hover {
+    background-color: #8d5cbf;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
