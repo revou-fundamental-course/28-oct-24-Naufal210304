@@ -1,6 +1,8 @@
-body {
-        background: linear-gradient(to right, #000000, #FFD700);
-        /* Hitam (#000000) ke kuning (#FFD700) */
+body { 
+    background: linear-gradient(to right, #000000, #FFD700);
+    /* Hitam (#000000) ke kuning (#FFD700) */
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 /* Mengatur layout kanan dan kiri */
@@ -66,15 +68,168 @@ article, .result-card, .advice {
     margin: 5px;
 }
 
-.download-btn, .consult-btn, .register-btn {
-
-}
-
 .calculate-btn:hover, .reset-btn:hover, .download-btn:hover, .consult-btn:hover, .register-btn:hover {
-    background-color: #8d5cbf;
+    cursor: pointer;
 }
+
+button:hover{
+    box-shadow: 2px 2px 20px 5px white;
+    background-color:#ffffff;
+    color: #000000;
+}
+
+button {
+    background-color: rgb(99, 54, 54);
+    border: none;
+    padding: 8px;
+    margin: 7px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.advice {
+    display: grid;
+    justify justify-items: center;
+}
+
+.button-result {
+    width: 170px;
+    justify-self: center;
+}    
 
 footer {
-    text-align: center;
-    margin-top: 20px;
+    background-color: #111; /* Latar belakang hitam */
+    color: #fff; /* Warna teks putih agar kontras */
+    width: 100%; /* Lebar penuh layar */
+    padding: 20px 4px; /* Jarak atas dan bawah */
+    padding-bottom: 0px;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-container {
+    max-width: 1200px; /* Lebar maksimal konten footer */
+    margin: 0 auto; /* Tengah secara horizontal */
+    padding: 0px 30px 20px; /* Padding untuk jarak dari tepi layar */
+}
+
+.socmed-icon{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.socmed-icon a {
+    background-color: #fff; /* Warna ikon sosial media */
+    margin: 10px; /* Jarak antar ikon */
+    font-size: 24px; /* Ukuran ikon */
+    text-decoration: none; /* Menghapus underline pada tautan */
+    padding: 15px;
+    border-radius: 30px;
+}
+.socmed-icon a i {
+    background-color: transparent;
+    font-size: 20px;
+    color: #000000;
+    opacity: 0.9;
+}
+
+.socmed-icon a:hover {
+    background-color: #000000;
+    transition: 0.5s;
+}
+
+.socmed-icon a i:hover {
+    background-color: transparent;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+
+.footer-bottom {
+    background-color: #000000;
+    text-align: center; /* Tengah secara horizontal */
+    padding: 5px;
+    margin: 0;
+    left: 0;
+    bottom: 0;   
+}
+
+.footer-bottom p {
+    color: #ffffff;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 8px 5px;
+}
+
+.result-card {
+    padding: 10px;
+    border: 0 solid;
+    border-radius: 8px;
+    background: rgb(39, 38, 38);
+    justify-items: center;
+}
+
+.nilai {
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* CSS Responsif untuk Mobile Devices */
+@media (max-width: 768px) {
+    /* Mengatur layout kolom utama (section-form dan section-result) menjadi vertikal */
+    main {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Mengubah lebar section menjadi 100% dan menghilangkan padding tambahan */
+    .section-form, .section-result {
+        width: 100%;
+        margin-bottom: 20px; /* Beri jarak antar section */
+        padding: 15px;
+    }
+
+    /* Membuat artikel dan paragraf lebih nyaman dibaca di layar kecil */
+    article, p, label {
+        font-size: 14px;
+    }
+
+    /* Mengatur ulang tampilan tombol agar rapi dan rata tengah */
+    .calculate-btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Menyesuaikan tombol agar lebih besar dan mudah diklik */
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* Mengatur ulang layout result card agar responsif */
+    .result-card {
+        text-align: center;
+    }
+
+    /* Mengatur ulang ikon sosial media menjadi lebih kecil */
+    .socmed-icon a {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    /* Mengubah ukuran heading agar tidak terlalu besar di layar kecil */
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    /* Mengatur ulang teks kecil di footer */
+    .footer-bottom p {
+        font-size: 12px;
+    }
 }

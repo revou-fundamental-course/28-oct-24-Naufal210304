@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="JS/script.js" defer></script>
     <title>KALKULATOR BMI</title>
 </head>
 <body>
@@ -35,8 +37,8 @@
                 <input id="Tinggi-Badan" type="number" placeholder="0">
                 
                 <div class="calculate-btn">
-                    <button >Hitung BMI</button>
-                    <button >Reset</button>
+                    <button type="button" onclick="calculateBMI()">Hitung BMI</button>
+                    <button type="button" onclick="resetForm()">Reset</button>
                 </div>
             </form>
 
@@ -57,21 +59,33 @@
                 <h2>Hasil</h2>
             </header>
             <div class="result-card">
-                <h3>Berat Badan Lebih</h3>
-                <p>24.7</p>
-                <p>Anda memiliki berat badan berlebih</p>
+                <h3></h3> <!-- Kategori BMI -->
+                <p class="nilai">0</p> <!-- Nilai BMI -->
+                <p></p> <!-- Pesan saran -->
             </div>
 
             <article class="advice">
-                <p>Hasil BMI diantara 23 dan 25. Anda berada dalam kategori overweight atau berat badan berlebih...</p>
-                <button>Konsultasi Ahli Gizi via Aplikasi</button>
-                <button>Registrasi Online Ahli Gizi</button>
+                <p>Berdasarkan hasil perhitungan BMI, jika nilai BMI Anda kurang dari 18,5, Anda tergolong dalam kategori 'Kekurangan berat badan', yang menunjukkan perlunya peningkatan asupan kalori dan nutrisi; nilai BMI antara 18,5 hingga 24,9 menunjukkan bahwa Anda berada dalam kategori 'Normal', yang berarti berat badan Anda ideal dan sebaiknya tetap menjaga pola hidup sehat; jika BMI Anda berada di antara 25 hingga 29,9, Anda dikategorikan sebagai 'Kelebihan berat badan', yang menunjukkan perlunya perhatian terhadap pola makan dan aktivitas fisik; dan jika nilai BMI Anda mencapai 30 atau lebih, Anda tergolong 'Obesitas', yang sangat disarankan untuk berkonsultasi dengan ahli gizi atau profesional kesehatan guna merencanakan program penurunan berat badan yang tepat.</p> <!-- Saran berdasarkan BMI -->
+                <button class="button-result" type="button" onclick="location.href='https://www.halodoc.com/?gad_source=1&gclid=Cj0KCQjwm5e5BhCWARIsANwm06h5XqahRlyywITj8oZFE5gvBdHspdFWfMyKspmQnWtKUSuO5RM4Ca0aAsBDEALw_wcB'">Konsultasi Ahli Gizi</button>
+                <button class="button-result" type="button" onclick="location.href='https://www.halodoc.com/artikel/penting-dicatat-ini-5-tips-terapkan-pola-makan-sehat?utm_source=google&utm_medium=cpc&utm_campaign=&utm_content=151268030042&utm_term=&gad_source=1&gclid=Cj0KCQjwm5e5BhCWARIsANwm06gbPXp1RafAsZIWG9RGJTGo1xJcsxFox2lrSu0XJnk7sY2-ZwpS0xEaAsnrEALw_wcB'">Tips Pola Makan Sehat</button>
             </article>
         </section>
     </main>
 
     <footer>
-        <span>Download Aplikasi</span>
+        <div class="footer-container">
+            <div class="socmed-icon">
+                <a href="https://www.instagram.com/revou_id/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@revoudotco"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://revou.co/?utm_source=sem&utm_medium=cpc&utm_content=id_fp_branded_high_conversion_revou--revou_e_c&gad_source=1&gclid=Cj0KCQjwm5e5BhCWARIsANwm06gQFmvXvKjAR6hZF3yZXg44wO5TKk3vfC3PbyL4SRmBDJl1lsz_KpQaAsuZEALw_wcB#our-programs"><i class="fa-brands fa-google"></i></a>
+                <a href="https://x.com/revoudotco"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">Naufal</span></p>
+        </div>
     </footer>
+
+    <script src="JS/script.js" defer></script>
 </body>
 </html>
