@@ -37,5 +37,5 @@ function resetForm() {
     document.querySelector("form").reset();
     document.querySelector(".nilai").textContent = "0"; // Reset nilai BMI
     document.querySelector(".result-card h3").textContent = ""; // Reset kategori
-    document.querySelector(".advice p").textContent = ""; // Reset saran
+    document.querySelector(".advice p").textContent = "Berdasarkan hasil perhitungan BMI, jika nilai BMI Anda kurang dari 18,5, Anda tergolong dalam kategori 'Kekurangan berat badan', yang menunjukkan perlunya peningkatan asupan kalori dan nutrisi; nilai BMI antara 18,5 hingga 24,9 menunjukkan bahwa Anda berada dalam kategori 'Normal', yang berarti berat badan Anda ideal dan sebaiknya tetap menjaga pola hidup sehat; jika BMI Anda berada di antara 25 hingga 29,9, Anda dikategorikan sebagai 'Kelebihan berat badan', yang menunjukkan perlunya perhatian terhadap pola makan dan aktivitas fisik; dan jika nilai BMI Anda mencapai 30 atau lebih, Anda tergolong 'Obesitas', yang sangat disarankan untuk berkonsultasi dengan ahli gizi atau profesional kesehatan guna merencanakan program penurunan berat badan yang tepat."; // Reset saran
 }
