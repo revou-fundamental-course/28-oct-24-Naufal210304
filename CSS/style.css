@@ -1,5 +1,5 @@
 body { 
-    background: linear-gradient(to right, #000000, #FFD700);
+    background: #3aa050;
     /* Hitam (#000000) ke kuning (#FFD700) */
     margin-bottom: 0;
     margin-left: 0;
@@ -12,6 +12,7 @@ main {
     padding: 20px;
     gap: 20px;
     margin-right: -8.5px;
+    min-height: 100vh;
 }
 
 .section-form, .section-result {
@@ -29,13 +30,15 @@ main {
 
 form {
     display: grid;
-    background: rgb(39, 38, 38);
+    background: #357a5a;
     border-radius: 8px;
     padding: 8px;
+    height: 40%;
 }
 
 .gender, input, label {
     padding: 2px;
+    font-size: 18px;
 }
 
 .section-result {
@@ -43,14 +46,26 @@ form {
     backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 10px;
+   
 }
 
-h1, h2, h3 {
-    color: #ffffff;
+h1, h2 {
+    color: #000000;
     font-weight: bold;
+    font-size: 29px;
 }
 
-article, p, label {
+h3 {
+    font-size: 29px;
+    color: #ffffff;
+}
+
+article, p {
+    color: #000000;
+    font-size: 21px;
+}
+
+label {
     color: #ffffff;
 }
 
@@ -80,26 +95,29 @@ button:hover{
 }
 
 button {
-    background-color: rgb(99, 54, 54);
+    background-color: #243447;
     border: none;
     padding: 8px;
     margin: 7px;
     color: #ffffff;
     border-radius: 5px;
+    font-size: 14px;
 }
 
 .advice {
-    display: grid;
-    justify justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .button-result {
     width: 170px;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
 }    
 
 footer {
-    background-color: #111; /* Latar belakang hitam */
+    background-color: #111111; /* Latar belakang hitam */
     color: #fff; /* Warna teks putih agar kontras */
     width: 100%; /* Lebar penuh layar */
     padding: 20px 4px; /* Jarak atas dan bawah */
@@ -136,7 +154,7 @@ footer {
 }
 
 .socmed-icon a:hover {
-    background-color: #000000;
+    background-color: #111111;
     transition: 0.5s;
 }
 
@@ -160,6 +178,24 @@ footer {
     color: #ffffff;
 }
 
+.download-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 35px;
+}
+
+.download-links img {
+    width: 320px; /* Sesuaikan ukuran sesuai kebutuhan */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.download-links img:hover {
+    transform: scale(1.1); /* Sedikit perbesar saat hover */
+}
+
 .designer {
     opacity: 0.7;
     text-transform: uppercase;
@@ -172,13 +208,164 @@ footer {
     padding: 10px;
     border: 0 solid;
     border-radius: 8px;
-    background: rgb(39, 38, 38);
+    background: #357a5a;
     justify-items: center;
 }
 
 .nilai {
     font-size: 50px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
 }
 
-ini css saya
+/* Tampilan untuk perangkat ekstra kecil (ponsel kecil, 600px dan ke bawah) */
+@media (max-width: 600px) {
+    main {
+        display: block;
+        padding: 10px;
+    }
+
+    .section-form, .section-result {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 15px;
+        min-height: 350px;
+    }
+
+    h1, h2, h3 {
+        font-size: 22px;
+    }
+
+    article, p {
+        font-size: 16px;
+    }
+
+    label, .gender, input {
+        font-size: 14px;
+    }
+
+    .calculate-btn, .button-result {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .download-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .download-links img {
+        width: 160px;
+    }
+}
+
+/* Tampilan untuk perangkat kecil (tablet potret dan ponsel besar, 600px dan lebih tinggi) */
+@media (min-width: 600px) and (max-width: 768px) {
+    main {
+        display: block;
+        padding: 15px;
+    }
+
+    .section-form, .section-result {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+        min-height: 400px;
+    }
+
+    h1, h2, h3 {
+        font-size: 24px;
+    }
+
+    article, p {
+        font-size: 17px;
+    }
+
+    label, .gender, input {
+        font-size: 15px;
+    }
+
+    .calculate-btn, .button-result {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .download-links img {
+        width: 180px;
+    }
+}
+
+/* Tampilan untuk perangkat berukuran sedang (tablet lanskap, 768px dan lebih tinggi) */
+@media (min-width: 768px) and (max-width: 992px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .section-form, .section-result {
+        width: 48%;
+        padding: 20px;
+        min-height: 450px;
+    }
+
+    h1, h2, h3 {
+        font-size: 28px;
+    }
+
+    article, p {
+        font-size: 18px;
+    }
+
+    label, .gender, input {
+        font-size: 16px;
+    }
+
+    .calculate-btn, .button-result {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .download-links img {
+        width: 200px;
+    }
+}
+
+/* Tampilan untuk perangkat besar (laptop/desktop, 992px dan lebih tinggi) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .section-form, .section-result {
+        width: 48%;
+        padding: 25px;
+        min-height: 500px;
+    }
+
+    h1, h2, h3{
+        font-size: 32px;
+    }
+
+    article, p {
+        font-size: 20px;
+    }
+
+    label, .gender, input {
+        font-size: 17px;
+    }
+
+    .calculate-btn, .button-result {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .download-links img {
+        width: 220px;
+    }
+}
